@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Control nodeMCU</title>
+
+        <!-- aREST.js component libraries -->
+        <!--import jQuery -->
+		<script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<!-- import AJAXq -->
+		<script src="https://cdn.jsdelivr.net/npm/ajaxq@0.0.7/ajaxq.js"></script>
+		<!-- aREST.js -->
+        <!-- <script src="https://cdn.rawgit.com/marcoschwartz/aREST.js/master/aREST.js"></script> -->
+        <script src = "lib/aREST.js"></script>
+        
+        <!-- p5.js component libraries -->
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+        <script src = "lib/p5.speech.js"></script>
+
+        <!-- Vue.js -->
+        <script src = "https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+    </head>
+    <body>
+        <div id = "speech_recog">
+            <p>{{ message }}</p>
+            <p id = "sending_text">{{ format }}</p>
+        </div>
+        <div>
+            <button onclick = "start_record()">Start record</button>
+            <button onclick = "stop_record()">Stop record</button>
+        </div>
+        <div>
+            <input type = "text" id = "device_ip" value = "192.168.1.90" />
+            <button id = "send">Send</button>
+        </div>
+        <script src = "symbol_format.js"></script>
+        <script src = "speech_recognition.p5.js"></script>
+        <script src = "print_result.vue.js"></script>
+        <script src = "board_control.jquery.js"></script>
+    </body>
+</html>
