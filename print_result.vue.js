@@ -9,3 +9,7 @@ var app = new Vue({
 app.$watch("message", function(newValue, oldValue) {
     format_symbol(newValue);
 })
+
+app.$watch("format", function(newValue, oldValue) {
+    updateLink(newValue);
+})
