@@ -15,7 +15,7 @@
     </head>
     <body>
         <div id = "speech_recog">
-            <input type = "text" v-bind:value = "message" />
+            <input type = "text" v-model = "message" />
             <p id = "sending_text">{{ format }}</p>
         </div>
         <div>
