@@ -6,34 +6,40 @@
         <!--import jQuery -->
         <script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
         
+        <!-- Google Material Icons -->
+        <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+
         <!-- materialize -->
         <link type = "text/css" rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media = "screen,projection">
         <meta name = "viewport" content = "width=device-width, initial-scale = 1.0"/>
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-                
+
         <!-- p5.js component libraries -->
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
         <script src = "lib/p5.speech.js"></script>
 
         <!-- Vue.js -->
         <script src = "https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+
+        <!-- my own style -->
+        <link rel = "stylesheet" href = "style.css">
     </head>
     <body>
         <div id = "speech_recog">
-            <input type = "text" v-model = "message" />
+            <input id = "speech" type = "text" v-model = "message" />
             <p id = "sending_text">{{ format }}</p>
         </div>
         <div>
-            <button onclick = "start_record()">Start record</button>
-            <button onclick = "stop_record()">Stop record</button>
+            <button onclick = "start_record()" class = "btn-floating btn-large waves-effect waves-light red"><i class = "material-icons">mic</i></button>
+            <button onclick = "stop_record()" class = "btn-floating btn-large waves-effect waves-light blue"><i class = "material-icons">mic_off</i></button>
         </div>
         <div id = "send">
             <input type = "text" id = "device_ip" value = "192.168.1.90" />
-            <a id = "link" href = "http://helloworld.com" target = "_blank">Send</a>
+            <a id = "link" class = "waves-effect waves-light btn" href = "http://helloworld.com" target = "_blank">Send</a>
         </div>
         <script src = "symbol_format.js"></script>
         <script src = "testing.jquery.js"></script>
-        <script src = "speech_recognition.p5.js"></script>
+        <script src = "speech_recognition_vi.p5.js"></script>
         <script src = "print_result.vue.js"></script>
     </body>
 </html>

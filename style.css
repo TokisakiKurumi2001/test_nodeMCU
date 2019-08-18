@@ -1,5 +1,15 @@
-div
+body
 {
-    margin-left: 10em;
-    margin-top: 10em;
+    padding:10px;
+}
+
+#speech
+{
+    max-width:200px;
+}
+
+#device_ip
+{
+    max-width: 100px;
+    display: block;
 }
