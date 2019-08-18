@@ -1,15 +1,28 @@
-body
-{
-    padding:10px;
-}
-
 #speech
 {
-    max-width:200px;
+    width:100%;
 }
 
 #device_ip
 {
-    max-width: 100px;
+    width:100%;
+    text-align: center;
     display: block;
+}
+
+button
+{
+    display:flex !important;
+    justify-content: center !important;
+}
+
+#link
+{
+    width:100%;
+}
+
+.center
+{
+    left:auto;
+    right: auto;
 }

@@ -25,17 +25,30 @@
         <link rel = "stylesheet" href = "style.css">
     </head>
     <body>
-        <div id = "speech_recog">
-            <input id = "speech" type = "text" v-model = "message" />
-            <p id = "sending_text">{{ format }}</p>
-        </div>
-        <div>
-            <button onclick = "start_record()" class = "btn-floating btn-large waves-effect waves-light red"><i class = "material-icons">mic</i></button>
-            <button onclick = "stop_record()" class = "btn-floating btn-large waves-effect waves-light blue"><i class = "material-icons">mic_off</i></button>
-        </div>
-        <div id = "send">
-            <input type = "text" id = "device_ip" value = "192.168.1.90" />
-            <a id = "link" class = "waves-effect waves-light btn" href = "http://helloworld.com" target = "_blank">Send</a>
+        <div class = "container">
+            <!-- message to send -->
+            <div id = "speech_recog" class = "row">
+                <div class = "col s8 push-s2">
+                    <input id = "speech" type = "text" v-model = "message" />
+                    <p id = "sending_text">{{ format }}</p>
+                </div>
+            </div>
+
+            <!-- buttons to start/stop recording -->
+            <div class = "row">
+                <div class = "col s6 push-s1 center">
+                    <button onclick = "start_record()" class = "btn-floating btn-large waves-effect waves-light red"><i class = "material-icons">mic</i></button>
+                </div>
+                <div class = "col s6 push-s2 center">
+                    <button onclick = "stop_record()" class = "btn-floating btn-large waves-effect waves-light blue"><i class = "material-icons">mic_off</i></button>
+                </div>
+            </div>
+
+            <!-- Place to determine the IP address of device the button(link) to launch new webpage which send data to the board -->
+            <div id = "send" class = "row">
+                <input type = "text" id = "device_ip" value = "192.168.1.90" />
+                <a id = "link" class = "waves-effect waves-light btn" href = "http://helloworld.com" target = "_blank">Send</a>
+            </div>
         </div>
         
         <script src = "symbol_format.js"></script>
