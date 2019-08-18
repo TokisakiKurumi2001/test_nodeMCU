@@ -26,3 +26,8 @@ button
     left:auto;
     right: auto;
 }
+
+#sending_text
+{
+    display: none;
+}
