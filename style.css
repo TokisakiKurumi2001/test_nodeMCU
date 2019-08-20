@@ -1,10 +1,17 @@
+body
+{
+    background-color:hsl(236, 31%, 20%);
+}
+
 #speech
 {
     width:100%;
+    color:hsl(236, 21%, 94%);
 }
 
 #device_ip
 {
+    color:hsl(236, 21%, 94%);
     width:100%;
     text-align: center;
     display: block;
@@ -16,15 +23,26 @@ button
     justify-content: center !important;
 }
 
+.custom-color-1
+{
+    background-color: hsl(236, 50%, 30%);
+}
+
+.custom-color-2
+{
+    background-color: hsl(236, 50%, 30%);
+}
+
 #link
 {
     width:100%;
+    background-color: hsl(236, 41%, 56%);
 }
 
 .center
 {
-    left:auto;
-    right: auto;
+    display: flex;
+    justify-content: center;
 }
 
 #sending_text
