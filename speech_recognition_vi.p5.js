@@ -9,11 +9,6 @@ function start_record()
     myRec.start();
 }
 
-function draw()
-{
-    // Nothing to draw
-}
-
 function parseResult()
 {
     var word = myRec.resultString;
