@@ -3,6 +3,11 @@ body
     background-color:hsl(236, 31%, 20%);
 }
 
+#p5_mouse_control
+{
+    width:100%;
+}
+
 #speech
 {
     width:100%;
