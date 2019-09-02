@@ -3,6 +3,12 @@ body
     background-color:hsl(236, 31%, 20%);
 }
 
+h3
+{
+    text-align: center;
+    color:hsl(236, 21%, 94%);
+}
+
 #p5_mouse_control
 {
     width:100%;

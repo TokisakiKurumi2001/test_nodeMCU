@@ -11,6 +11,10 @@ function setup()
 
 function draw()
 {
-    fill(74,100,100);
+    noStroke();
+    fill(236,54,19);
     ellipse(width/2, height/2, width, height);
+
+    fill(236,54,16);
+    ellipse(width/2, height/2, width/2, height/2);
 }
