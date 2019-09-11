@@ -1,5 +1,6 @@
 var canvas;
 var size;
+var links = new Array(6);
 
 function setup()
 {
@@ -8,8 +9,37 @@ function setup()
     // add the canvas into a parent dir whose's id is `p5_mouse_control`
     canvas = createCanvas(size, size).parent("p5_mouse_control");
 
+
+    // initialize some links to the mouse
+
+    // Top link in big circle -> mouse goes up
+    links[0] = createElement("a","Goes up").position(width/2, height * 0.05).attribute("href","http://192.168.1.90/keyboard?params=$u");
+    links[0].attribute("data-link","u").attribute("class","links");
+
+    // Bottom link in big circle -> mouse goes down
+    links[1] = createElement("a","Goes down").position(width/2, height * 0.95).attribute("href","http://192.168.1.90/keyboard?params=$d");
+    links[1].attribute("data-link","d").attribute("class","links");
+
+    // Left link in big circle -> mouse goes left
+    links[2] = createElement("a","Goes left").position(width * 0.05, height/2).attribute("href","http://192.168.1.90/keyboard?params=$l");
+    links[2].attribute("data-link","l").attribute("class","links");
+
+    // Right link in big circle -> mouse goes right
+    links[3] = createElement("a","Goes right").position(width * 0.95, height/2).attribute("href","http://192.168.1.90/keyboard?params=$r");
+    links[3].attribute("data-link","r").attribute("class","links");
+
+    // Top link in small circle -> mouse scrolls up
+    links[4] = createElement("a","Scrolls up").position(width/2, height * 0.375).attribute("href","http://192.168.1.90/keyboard?params=$t");
+    links[4].attribute("data-link","t").attribute("class","links");
+
+    // Bottom link in small circle -> mouse scrolls down
+    links[5] = createElement("a","Scrolls down").position(width/2, height * 0.625).attribute("href","http://192.168.1.90/keyboard?params=$b");
+    links[5].attribute("data-link","b").attribute("class","links");
+    
     colorMode(HSL);
     background(236,31,20);
+    print(width);
+    print(height);
 }
 
 function draw()
