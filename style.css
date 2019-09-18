@@ -14,6 +14,16 @@ h3
     width:100%;
 }
 
+#links_control
+{
+    position: relative;
+}
+
+.links
+{
+    color:white;
+}
+
 #speech
 {
     width:100%;
