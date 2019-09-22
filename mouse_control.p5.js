@@ -28,7 +28,7 @@ function setup()
     links[3].attribute("data-link","r").attribute("class","links").attribute("target","_blank").parent("links_control");
 
     // Top link in small circle -> mouse scrolls up
-    links[4] = createElement("a","Su").position(width*0.475, height * 0.375 * 0.90).attribute("href","http://192.168.1.90/keyboard?params=$t");
+    links[4] = createElement("a","Su").position(width*0.475, height * 0.375).attribute("href","http://192.168.1.90/keyboard?params=$t");
     links[4].attribute("data-link","t").attribute("class","links").attribute("target","_blank").parent("links_control");
 
     // Bottom link in small circle -> mouse scrolls down
