@@ -28,6 +28,17 @@
     <body>
         <div class = "container">
             <h3>Remote control</h3>
+
+            <!-- checkbox to switch between EN and VI-->
+            <div class = "switch">
+                <label>
+                    VI
+                    <input type = "checkbox" id = "switch_lang"/>
+                    <span class = "lever"></span>
+                    EN
+                </label>
+            </div>
+
             <!-- mouse control -->
             <div class = "col s12">
                 <div id = "p5_mouse_control"></div>
@@ -65,5 +76,6 @@
         <script src = "update_link.js"></script>
         <script src = "speech_recognition_vi.p5.js"></script>
         <script src = "print_result.vue.js"></script>
+        <script src = "switch_lang.jquery.js"></script>
     </body>
 </html>
