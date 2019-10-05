@@ -1,29 +1,22 @@
 // library to I2C communication and simulate the keyboard
 #include <Wire.h>
-#include <Mouse.h>
-#include <Keyboard.h>
+#include "Keyboard.h"
+#include "Mouse.h"
 
 // a char for reading the data from the master
 char read_byte;
 
 void setup() {
   // put your setup code here, to run once:
-
-  // slave at address `2`, have the same number in `Wire.beginTransmission(2);` in master
   Wire.begin(8);
   // when receive data, do the `receiveEvent` function
   Wire.onReceive(receiveEvent);
 
-  // debugging
-  // Serial.begin(9600);
-
-  // ready to simulate the mouse
-  Mouse.begin();
-
   // ready to simulate the keyboard
   Keyboard.begin();
 
-  randomSeed(analogRead(0));
+  // ready to simulate the mouse
+  Mouse.begin();
 }
 
 void loop() {
@@ -35,7 +28,7 @@ void loop() {
 
 void mouse_control(char command)
 {
-  int random_dist = random(5, 15);
+  int random_dist = random(10, 20);
   switch (command)
   {
     case 'u':
