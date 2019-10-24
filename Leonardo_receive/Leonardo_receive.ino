@@ -28,7 +28,7 @@ void loop() {
 
 void mouse_control(char command)
 {
-  int random_dist = random(10, 20);
+  int random_dist = random(5, 10);
   switch (command)
   {
     case 'u':
