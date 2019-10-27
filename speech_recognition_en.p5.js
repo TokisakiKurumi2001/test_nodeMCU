@@ -12,6 +12,8 @@ function start_record()
 function parseResult()
 {
     var word = myRec.resultString;
+    // `word` : what the webapp have listened from us
+    // then we pass it to the webpage through the pipe which Vue has created for us
     console.log(app.message = word);
 }
 
