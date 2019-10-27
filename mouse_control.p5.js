@@ -6,7 +6,7 @@ function setup()
 {
     // get the size to draw a canvas according to the size of screen of device
     size = document.querySelector("#p5_mouse_control").offsetWidth;
-    // add the canvas into a parent dir whose's id is `p5_mouse_control`
+    // add the canvas into a parent div#p5_mouse_control
     canvas = createCanvas(size, size).parent("p5_mouse_control");
 
     // initialize some links to the mouse
@@ -37,13 +37,12 @@ function setup()
     
     colorMode(HSL);
     background(236,31,20);
-    print(width);
-    print(height);
 }
 
 function draw()
 {
     noStroke();
+    
     // big circle
     fill(236,54,19);
     ellipse(width/2, height/2, width, height);
@@ -73,7 +72,7 @@ function draw()
     // down button in small circle
     triangle(width/2, height * 0.95 - height/2*0.65, width/2*0.85, height * 0.9 - height/2*0.65, width/2*1.15, height * 0.9 - height/2*0.65);
 
-    // a line to distinguish two half part of the small circle
+    // a horizontal line to distinguish two half part of the small circle
     stroke(236, 21, 94);
     line(width/4, height/2, width*3/4, height/2);
 }
