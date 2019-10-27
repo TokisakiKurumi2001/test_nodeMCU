@@ -12,27 +12,27 @@ function setup()
     // initialize some links to the mouse
 
     // Top link in big circle -> mouse goes up
-    links[0] = createElement("a","U").position(width*0.475, height * 0.05).attribute("href","http://192.168.1.90/keyboard?params=$u");
+    links[0] = createElement("a","U").position(width*0.475, height * 0.05).attribute("href","http://192.168.1.164/keyboard?params=$u");
     links[0].attribute("data-link","u").attribute("class","links").attribute("target","_blank").parent("links_control");
 
     // Bottom link in big circle -> mouse goes down
-    links[1] = createElement("a","D").position(width*0.475, height * 0.87).attribute("href","http://192.168.1.90/keyboard?params=$d");
+    links[1] = createElement("a","D").position(width*0.475, height * 0.87).attribute("href","http://192.168.1.164/keyboard?params=$d");
     links[1].attribute("data-link","d").attribute("class","links").attribute("target","_blank").parent("links_control");
 
     // Left link in big circle -> mouse goes left
-    links[2] = createElement("a","L").position(width * 0.06, height*0.46).attribute("href","http://192.168.1.90/keyboard?params=$l");
+    links[2] = createElement("a","L").position(width * 0.06, height*0.46).attribute("href","http://192.168.1.164/keyboard?params=$l");
     links[2].attribute("data-link","l").attribute("class","links").attribute("target","_blank").parent("links_control");
 
     // Right link in big circle -> mouse goes right
-    links[3] = createElement("a","R").position(width * 0.90, height*0.46).attribute("href","http://192.168.1.90/keyboard?params=$r");
+    links[3] = createElement("a","R").position(width * 0.90, height*0.46).attribute("href","http://192.168.1.164/keyboard?params=$r");
     links[3].attribute("data-link","r").attribute("class","links").attribute("target","_blank").parent("links_control");
 
     // Top link in small circle -> mouse scrolls up
-    links[4] = createElement("a","Su").position(width*0.475, height * 0.375).attribute("href","http://192.168.1.90/keyboard?params=$t");
+    links[4] = createElement("a","Su").position(width*0.475, height * 0.375).attribute("href","http://192.168.1.164/keyboard?params=$t");
     links[4].attribute("data-link","t").attribute("class","links").attribute("target","_blank").parent("links_control");
 
     // Bottom link in small circle -> mouse scrolls down
-    links[5] = createElement("a","Sd").position(width*0.475, height * 0.625*0.87).attribute("href","http://192.168.1.90/keyboard?params=$b");
+    links[5] = createElement("a","Sd").position(width*0.475, height * 0.625*0.87).attribute("href","http://192.168.1.164/keyboard?params=$b");
     links[5].attribute("data-link","b").attribute("class","links").attribute("target","_blank").parent("links_control");
     
     colorMode(HSL);
