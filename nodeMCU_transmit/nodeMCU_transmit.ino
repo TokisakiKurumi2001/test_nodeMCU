@@ -23,14 +23,14 @@
 #define LISTEN_PORT 80
 
 // define LED pin to view the processing of wifi connection instead of Serial
-#define LED 12
+#define LED D7
 
 // create aREST instance
 aREST rest = aREST();
 
 // Wifi parameters including name and password
-const char * ssid = "wifi-name";
-const char * password = "wifi-password";
+const char * ssid = "wifiname";
+const char * password = "wifipassword";
 
 // array of chars, which is the data to transmit to the slave(Leonardo)
 char str[50];
@@ -57,14 +57,12 @@ void setup() {
   // Connect to the Wifi
   WiFi.begin(ssid, password);
 
-  // Instead of using Serial, we use the LED blinking
-  // For everytime we try to connect to the wifi, the LED will blink, initial state = LOW
+  // Instead of using Serial, we turn on the LED when nodeMCU attempt to connect Wifi
   while (WiFi.status() != WL_CONNECTED)
   {
-    digitalWrite(LED, LOW);
-    delay(500);
-    Serial.print(".");
     digitalWrite(LED, HIGH);
+    delay(1000);
+    Serial.print(".");
   }
 
   // If wifi has been connected successfully, turn off the LED
