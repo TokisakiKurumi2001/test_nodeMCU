@@ -61,7 +61,7 @@ void setup() {
   while (WiFi.status() != WL_CONNECTED)
   {
     digitalWrite(LED, HIGH);
-    delay(1000);
+    delay(500);
     Serial.print(".");
   }
 
