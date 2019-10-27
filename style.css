@@ -9,6 +9,9 @@ h3
     color:hsl(236, 21%, 94%);
 }
 
+/*
+*   languages switch: to be set on the top left of the page
+*/
 .switch
 {
     position: absolute;
@@ -16,21 +19,34 @@ h3
     left:75%;
 }
 
+/*
+*   stretch maximum its size inside div.col.s12
+*/
 #p5_mouse_control
 {
     width:100%;
 }
 
+/*
+*   Where we contain all the mouse links, `relative` to div#p5_mouse_control
+*/
 #links_control
 {
     position: relative;
 }
 
+/*
+*   Set the color of the mouse links to white, which is the same color
+*   as button on the button on the mouse_control_panel
+*/
 .links
 {
     color:white;
 }
 
+/*
+*   Contains the result string listened from user
+*/
 #speech
 {
     width:100%;
@@ -45,12 +61,20 @@ h3
     display: block;
 }
 
-button
+/*
+*   An effort to make the recoding buttons align to the center
+*/
+.center
 {
-    display:flex !important;
-    justify-content: center !important;
+    display: flex;
+    justify-content: center;
 }
 
+/*
+*   The two following class are for the button of voice recoding
+*   .custom-color-1: recording
+*   .custom-color-2: stop recording
+*/
 .custom-color-1
 {
     background-color: hsl(236, 50%, 30%);
@@ -61,18 +85,19 @@ button
     background-color: hsl(236, 50%, 30%);
 }
 
+/*
+*   The style for the button which establish the link to control keyboard
+*/
 #link
 {
     width:100%;
     background-color: hsl(236, 41%, 56%);
 }
 
-.center
-{
-    display: flex;
-    justify-content: center;
-}
-
+/*
+*   This is the id for the text that has been formatted(remove accent)
+*   Don't display it to make the design confused
+*/
 #sending_text
 {
     display: none;
