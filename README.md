@@ -8,7 +8,7 @@ However, the device just has 1 USB port only. I can't connect keyboard and mouse
 
 As usual, we use the remote control to move the mouse when surfing the web. When typing(searching on youtube), there will a virtual keyboard, and we need to use the remote to go the right letter by pressing many up, down, right, left arrow on the remote.
 
-This is quite tedious. In addition, I cannot surf when browsing the Internet. Because there seems to be no way to surf.
+This is quite tedious. In addition, I cannot scroll when browsing the Internet. Because there seems to be no way to scroll.
 
 ## My solution
 
@@ -32,14 +32,14 @@ There is some big bugs here:
 
 1. Every button or links will open a new page on the browser:
 
-I use aREST for establishing wireless control. But to host my UI design, which is the web page. It would require a local server since it takes too long to(sometimes cannot) connect to the aREST cloud service provided.
+    I use aREST for establishing wireless control. But to host my UI design, which is the web page. It would require a local server since it takes too long to(sometimes cannot) connect to the aREST cloud service provided.
 
-My solution at this time is this repository. It will host the web page for me. And when I want to give command, it will open the new page to transmit command.
+    My solution at this time is this repository. It will host the web page for me. And when I want to give command, it will open the new page to transmit command.
 
-I once use AJAXQ for sending message to the nodeMCU ip address. However, it seems not working at any time.
+    I once use AJAXQ for sending message to the nodeMCU ip address. However, it seems not working at any time.
 
 2. nodeMCU takes it too long to connect to the wifi hospot:
 
-It seems like nodeMCU encounters hidden problem when connecting the wifi hospot.
+    It seems like nodeMCU encounters hidden problem when connecting the wifi hospot.
 
 My attempt to solve this is to log out every wifi that nodeMCU can scan for and connect to one of those. Hope to find a way here.
